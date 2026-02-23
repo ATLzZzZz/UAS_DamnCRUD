@@ -1,4 +1,5 @@
 # DOKUMENTASI CI/CD PIPELINE
+
 ## Automation Testing DamnCRUD dengan GitHub Actions & Pytest Parallel
 
 **Tanggal:** 23 Februari 2026  
@@ -11,6 +12,7 @@
 ## RINGKASAN PIPELINE
 
 Pipeline CI/CD ini akan secara otomatis menjalankan 5 test case setiap kali ada:
+
 - Push ke branch `main` atau `master`
 - Pull Request ke branch `main` atau `master`
 - Manual trigger dari GitHub Actions
@@ -75,15 +77,15 @@ name: DamnCRUD Automation Test
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [main, master]
   pull_request:
-    branches: [ main, master ]
-  workflow_dispatch:  # Manual trigger
+    branches: [main, master]
+  workflow_dispatch: # Manual trigger
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    
+
     services:
       mysql:
         image: mysql:8.0
@@ -109,13 +111,13 @@ jobs:
 
 ## 5 TEST CASES YANG DIJALANKAN
 
-| No | Test Case ID | Test Name | Marker |
-|----|--------------|-----------|--------|
-| 1 | TC-013 | `test_TC013_create_contact_valid_data` | `@pytest.mark.create` |
-| 2 | TC-018 | `test_TC018_update_contact_valid_data` | `@pytest.mark.update` |
-| 3 | TC-024 | `test_TC024_delete_contact_with_confirmation` | `@pytest.mark.delete` |
-| 4 | TC-010 | `test_TC010_search_datatables` | `@pytest.mark.search` |
-| 5 | TC-028 | `test_TC028_view_profile_page` | `@pytest.mark.profile` |
+| No  | Test Case ID | Test Name                                     | Marker                 |
+| --- | ------------ | --------------------------------------------- | ---------------------- |
+| 1   | TC-013       | `test_TC013_create_contact_valid_data`        | `@pytest.mark.create`  |
+| 2   | TC-018       | `test_TC018_update_contact_valid_data`        | `@pytest.mark.update`  |
+| 3   | TC-024       | `test_TC024_delete_contact_with_confirmation` | `@pytest.mark.delete`  |
+| 4   | TC-010       | `test_TC010_search_datatables`                | `@pytest.mark.search`  |
+| 5   | TC-028       | `test_TC028_view_profile_page`                | `@pytest.mark.profile` |
 
 ---
 
@@ -177,6 +179,7 @@ git push -u origin main
 ### 2. Workflow Akan Otomatis Berjalan
 
 Setelah push, GitHub Actions akan:
+
 1. Mendeteksi file `.github/workflows/test.yml`
 2. Membuat virtual machine Ubuntu
 3. Setup services (MySQL, PHP, Python, Chrome)
@@ -227,10 +230,10 @@ platform linux -- Python 3.11.0, pytest-7.4.0, pluggy-1.3.0
 plugins: xdist-3.5.0, html-4.1.1, metadata-3.0.0
 4 workers [5 items]
 
-test_pytest.py::TestDamnCRUD::test_TC013_create_contact_valid_data 
-test_pytest.py::TestDamnCRUD::test_TC018_update_contact_valid_data 
-test_pytest.py::TestDamnCRUD::test_TC010_search_datatables 
-test_pytest.py::TestDamnCRUD::test_TC024_delete_contact_with_confirmation 
+test_pytest.py::TestDamnCRUD::test_TC013_create_contact_valid_data
+test_pytest.py::TestDamnCRUD::test_TC018_update_contact_valid_data
+test_pytest.py::TestDamnCRUD::test_TC010_search_datatables
+test_pytest.py::TestDamnCRUD::test_TC024_delete_contact_with_confirmation
 test_pytest.py::TestDamnCRUD::test_TC028_view_profile_page
 
 [gw0] PASSED test_TC013_create_contact_valid_data
@@ -247,12 +250,14 @@ test_pytest.py::TestDamnCRUD::test_TC028_view_profile_page
 ## REPORTS & ARTIFACTS
 
 ### HTML Report
+
 - File: `report.html`
 - Berisi detail setiap test case
 - Screenshot jika test gagal
 - Metadata execution
 
 ### JUnit XML Report
+
 - File: `test-results.xml`
 - Format standar CI/CD
 - Digunakan untuk integrasi dengan tools lain

@@ -36,9 +36,11 @@ from selenium.common.exceptions import TimeoutException, NoAlertPresentException
 # =============================================================================
 # CONFIGURATION
 # =============================================================================
+# Default: localhost:81/DamnCRUD untuk XAMPP lokal
+# CI: http://localhost:8080 (dari environment variable)
 BASE_URL = os.environ.get("BASE_URL", "http://localhost:81/DamnCRUD")
 USERNAME = "admin"
-PASSWORD = "admin123"
+PASSWORD = "nimda666!"
 
 
 # =============================================================================
