@@ -1,0 +1,916 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 15">
+<link id=Main-File rel=Main-File href="../Test_Cases_DamnCRUD.xls">
+<link rel=File-List href=filelist.xml>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+<!--td
+	{padding-bottom:8px;
+	padding-top:8px;}
+tr:nth-child(even) {
+    background-color: #D9E2F3;
+}
+tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+tr:nth-child(even) {
+    background-color: #D9E2F3;
+}
+tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+table
+	{mso-displayed-decimal-separator:"\,";
+	mso-displayed-thousand-separator:"\.";}
+@page
+	{margin:1.0in .75in 1.0in .75in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;}
+-->
+</style>
+<![if !supportTabStrip]><script language="JavaScript">
+<!--
+function fnUpdateTabs()
+ {
+  if (parent.window.g_iIEVer>=4) {
+   if (parent.document.readyState=="complete"
+    && parent.frames['frTabs'].document.readyState=="complete")
+   parent.fnSetActiveSheet(0);
+  else
+   window.setTimeout("fnUpdateTabs();",150);
+ }
+}
+
+if (window.name!="frSheet")
+ window.location.replace("../Test_Cases_DamnCRUD.xls");
+else
+ fnUpdateTabs();
+//-->
+</script>
+<![endif]>
+</head>
+
+<body link="#0563C1" vlink="#954F72">
+
+<table border=0 cellpadding=0 cellspacing=0 width=992 style='border-collapse:
+ collapse;table-layout:fixed;width:745pt'>
+ <col width=92 style='mso-width-source:userset;mso-width-alt:3364;width:69pt'>
+ <col width=256 span=3 style='mso-width-source:userset;mso-width-alt:9362;
+ width:192pt'>
+ <col class=xl84 width=78 style='mso-width-source:userset;mso-width-alt:2852;
+ width:59pt'>
+ <col width=54 style='mso-width-source:userset;mso-width-alt:1974;width:41pt'>
+ <tr height=31 style='mso-height-source:userset;height:23.25pt'>
+  <td colspan=6 height=31 class=xl82 width=992 style='height:23.25pt;
+  width:745pt'>FUNCTIONAL TEST CASES - DamnCRUD</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=4 style='height:15.0pt;mso-ignore:colspan'></td>
+  <td class=xl84></td>
+  <td></td>
+ </tr>
+ <tr height=17 style='mso-height-source:userset;height:12.75pt'>
+  <td colspan=6 height=17 class=xl83 width=992 style='height:12.75pt;
+  width:745pt'>Tanggal: 23 Februari 2026</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 colspan=4 style='height:15.75pt;mso-ignore:colspan'></td>
+  <td class=xl84></td>
+  <td></td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl65 width=92 style='height:15.75pt;width:69pt'>ID</td>
+  <td class=xl65 width=256 style='border-left:none;width:192pt'>Test Case
+  Objective</td>
+  <td class=xl65 width=256 style='border-left:none;width:192pt'>Test Case
+  Description</td>
+  <td class=xl65 width=256 style='border-left:none;width:192pt'>Expected Result</td>
+  <td class=xl65 width=78 style='border-left:none;width:59pt'>Actual Result</td>
+  <td class=xl65 width=54 style='border-left:none;width:41pt'>Pass/Fail</td>
+ </tr>
+<!-- MODUL LOGIN -->
+ <tr height=21 style='height:15.75pt'>
+  <td colspan=6 height=21 class=xl71 width=992 style='border-right:1.0pt solid black;
+  height:15.75pt;width:745pt'>MODUL LOGIN</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td rowspan=4 height=81 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:60.75pt;border-top:none;width:69pt'>TC-001</td>
+  <td rowspan=4 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi login dengan kredensial valid</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Buka halaman login.php</td>
+  <td rowspan=4 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>User berhasil login dan diarahkan ke halaman
+  Dashboard (index.php)</td>
+  <td rowspan=4 class=xl68 width=78 style='border-bottom:1.0pt solid black;
+  border-top:none;width:59pt'>Berhasil ke halaman Dashboard</td>
+  <td rowspan=4 class=xl68 width=54 style='border-bottom:1.0pt solid black;
+  border-top:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl69 width=256 style='height:15.0pt;border-left:none;
+  width:192pt'>2. Masukkan username: admin</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl69 width=256 style='height:15.0pt;border-left:none;
+  width:192pt'>3. Masukkan password: nimda666!</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>4. Klik tombol &quot;OK I'm sign in&quot;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td rowspan=4 height=81 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:60.75pt;border-top:none;width:69pt'>TC-002</td>
+  <td rowspan=4 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi login dengan username salah</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Buka halaman login.php</td>
+  <td rowspan=4 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Muncul pesan error &quot;Damn, wrong
+  credentials!!&quot;</td>
+  <td rowspan=4 class=xl68 width=78 style='border-bottom:1.0pt solid black;
+  border-top:none;width:59pt'>Pesan Damn, wrong credentials!! Muncul</td>
+  <td rowspan=4 class=xl68 width=54 style='border-bottom:1.0pt solid black;
+  border-top:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl69 width=256 style='height:15.0pt;border-left:none;
+  width:192pt'>2. Masukkan username: wronguser</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl69 width=256 style='height:15.0pt;border-left:none;
+  width:192pt'>3. Masukkan password: nimda666!</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>4. Klik tombol &quot;OK I'm sign in&quot;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td rowspan=4 height=81 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:60.75pt;border-top:none;width:69pt'>TC-003</td>
+  <td rowspan=4 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi login dengan password salah</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Buka halaman login.php</td>
+  <td rowspan=4 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Muncul pesan error &quot;Damn, wrong
+  credentials!!&quot;</td>
+  <td rowspan=4 class=xl68 width=78 style='border-bottom:1.0pt solid black;
+  border-top:none;width:59pt'>Pesan Damn, wrong credentials!! Muncul</td>
+  <td rowspan=4 class=xl68 width=54 style='border-bottom:1.0pt solid black;
+  border-top:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl69 width=256 style='height:15.0pt;border-left:none;
+  width:192pt'>2. Masukkan username: admin</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl69 width=256 style='height:15.0pt;border-left:none;
+  width:192pt'>3. Masukkan password: wrongpassword</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>4. Klik tombol &quot;OK I'm sign in&quot;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td rowspan=4 height=81 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:60.75pt;border-top:none;width:69pt'>TC-004</td>
+  <td rowspan=4 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi login dengan username kosong</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Buka halaman login.php</td>
+  <td rowspan=4 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Muncul validasi HTML5 &quot;Harap isi bidang
+  ini&quot;</td>
+  <td rowspan=4 class=xl68 width=78 style='border-bottom:1.0pt solid black;
+  border-top:none;width:59pt'>Pesan muncul</td>
+  <td rowspan=4 class=xl68 width=54 style='border-bottom:1.0pt solid black;
+  border-top:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl69 width=256 style='height:15.0pt;border-left:none;
+  width:192pt'>2. Kosongkan field username</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl69 width=256 style='height:15.0pt;border-left:none;
+  width:192pt'>3. Masukkan password: nimda666!</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>4. Klik tombol &quot;OK I'm sign in&quot;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td rowspan=4 height=81 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:60.75pt;border-top:none;width:69pt'>TC-005</td>
+  <td rowspan=4 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi login dengan password kosong</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Buka halaman login.php</td>
+  <td rowspan=4 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Muncul validasi HTML5 &quot;Harap isi bidang
+  ini&quot;</td>
+  <td rowspan=4 class=xl68 width=78 style='border-bottom:1.0pt solid black;
+  border-top:none;width:59pt'>Pesan muncul</td>
+  <td rowspan=4 class=xl68 width=54 style='border-bottom:1.0pt solid black;
+  border-top:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl69 width=256 style='height:15.0pt;border-left:none;
+  width:192pt'>2. Masukkan username: admin</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl69 width=256 style='height:15.0pt;border-left:none;
+  width:192pt'>3. Kosongkan field password</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>4. Klik tombol &quot;OK I'm sign in&quot;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td rowspan=3 height=61 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:45.75pt;border-top:none;width:69pt'>TC-006</td>
+  <td rowspan=3 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi login dengan semua field kosong</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Buka halaman login.php</td>
+  <td rowspan=3 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Muncul validasi HTML5 &quot;Harap isi bidang
+  ini&quot;</td>
+  <td rowspan=3 class=xl68 width=78 style='border-bottom:1.0pt solid black;
+  border-top:none;width:59pt'>Pesan muncul</td>
+  <td rowspan=3 class=xl74 width=54 style='border-bottom:1.0pt solid black;
+  border-top:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl69 width=256 style='height:15.0pt;border-left:none;
+  width:192pt'>2. Kosongkan semua field</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>3. Klik tombol &quot;OK I'm sign in&quot;</td>
+ </tr>
+<!-- MODUL LOGOUT -->
+ <tr height=21 style='height:15.75pt'>
+  <td colspan=6 height=21 class=xl71 width=992 style='border-right:1.0pt solid black;
+  height:15.75pt;width:745pt'>MODUL LOGOUT</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td rowspan=2 height=41 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:30.75pt;border-top:none;width:69pt'>TC-007</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi fungsi logout</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Login ke sistem</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Session dihancurkan, user diarahkan ke halaman
+  login.php</td>
+  <td rowspan=2 class=xl68 width=78 style='border-bottom:1.0pt solid black;
+  border-top:none;width:59pt'>Menuju login.php</td>
+  <td rowspan=2 class=xl74 width=54 style='border-bottom:1.0pt solid black;
+  border-top:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>2. Klik tombol &quot;Sign out&quot;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td rowspan=2 height=41 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:30.75pt;border-top:none;width:69pt'>TC-008</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi akses halaman setelah logout</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Logout dari sistem</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>User diarahkan kembali ke halaman login.php</td>
+  <td rowspan=2 class=xl68 width=78 style='border-bottom:1.0pt solid black;
+  border-top:none;width:59pt'>Tetap di login.php</td>
+  <td rowspan=2 class=xl74 width=54 style='border-bottom:1.0pt solid black;
+  border-top:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>2. Akses langsung URL index.php di browser</td>
+ </tr>
+<!-- MODUL DASHBOARD -->
+ <tr height=21 style='height:15.75pt'>
+  <td colspan=6 height=21 class=xl71 width=992 style='border-right:1.0pt solid black;
+  height:15.75pt;width:745pt'>MODUL DASHBOARD (READ)</td>
+ </tr>
+ <tr height=30 style='mso-height-source:userset;height:22.5pt'>
+  <td rowspan=2 height=51 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:38.25pt;border-top:none;width:69pt'>TC-009</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi tampilan daftar kontak</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Login ke sistem</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Tabel menampilkan kolom: #, Name, Email, Phone,
+  Title, Created, dan Actions (edit/delete)</td>
+  <td rowspan=2 class=xl68 width=78 style='border-bottom:1.0pt solid black;
+  border-top:none;width:59pt'>Ada</td>
+  <td rowspan=2 class=xl74 width=54 style='border-bottom:1.0pt solid black;
+  border-top:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>2. Observasi tabel kontak di dashboard</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td rowspan=2 height=41 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:30.75pt;border-top:none;width:69pt'>TC-010</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi fitur search DataTables</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Login ke sistem</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Data terfilter menampilkan hanya kontak yang
+  mengandung kata &quot;John&quot;</td>
+  <td rowspan=2 class=xl68 width=78 style='border-bottom:1.0pt solid black;
+  border-top:none;width:59pt'>Berhasil Menampilkan</td>
+  <td rowspan=2 class=xl74 width=54 style='border-bottom:1.0pt solid black;
+  border-top:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>2. Ketik &quot;John&quot; di search box</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td rowspan=2 height=41 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:30.75pt;border-top:none;width:69pt'>TC-011</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi fitur sorting DataTables</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Login ke sistem</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Data terurut berdasarkan kolom Name
+  (ascending/descending)</td>
+  <td rowspan=2 class=xl68 width=78 style='border-bottom:1.0pt solid black;
+  border-top:none;width:59pt'>Berhasil</td>
+  <td rowspan=2 class=xl74 width=54 style='border-bottom:1.0pt solid black;
+  border-top:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>2. Klik header kolom &quot;Name&quot;</td>
+ </tr>
+ <tr height=35 style='height:26.25pt'>
+  <td height=35 class=xl67 width=92 style='height:26.25pt;border-top:none;
+  width:69pt'>TC-012</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>Verifikasi
+  akses dashboard tanpa login</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Tanpa login, akses langsung URL index.php</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>User
+  diarahkan ke halaman login.php</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Tetap
+  di login.php</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+<!-- MODUL CREATE -->
+ <tr height=21 style='height:15.75pt'>
+  <td colspan=6 height=21 class=xl71 width=992 style='border-right:1.0pt solid black;
+  height:15.75pt;width:745pt'>MODUL CREATE CONTACT</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td rowspan=6 height=121 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:90.75pt;border-top:none;width:69pt'>TC-013</td>
+  <td rowspan=6 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi penambahan kontak dengan data valid</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Klik menu &quot;Add New Contact&quot;</td>
+  <td rowspan=6 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Kontak baru tersimpan, redirect ke dashboard,
+  data muncul di tabel</td>
+  <td rowspan=6 class=xl68 width=78 style='border-bottom:1.0pt solid black;
+  border-top:none;width:59pt'>Berhasil</td>
+  <td rowspan=6 class=xl74 width=54 style='border-bottom:1.0pt solid black;
+  border-top:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl69 width=256 style='height:15.0pt;border-left:none;
+  width:192pt'>2. Isi Name: Test User</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl69 width=256 style='height:15.0pt;border-left:none;
+  width:192pt'>3. Isi Email: test@example.com</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl69 width=256 style='height:15.0pt;border-left:none;
+  width:192pt'>4. Isi Phone: 08123456789</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl69 width=256 style='height:15.0pt;border-left:none;
+  width:192pt'>5. Isi Title: Tester</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>6. Klik &quot;Save&quot;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td rowspan=4 height=81 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:60.75pt;border-top:none;width:69pt'>TC-014</td>
+  <td rowspan=4 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi validasi field Name kosong</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Klik menu &quot;Add New Contact&quot;</td>
+  <td rowspan=4 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Muncul validasi HTML5 &quot;Harap isi bidang
+  ini&quot;</td>
+  <td rowspan=4 class=xl68 width=78 style='border-bottom:1.0pt solid black;
+  border-top:none;width:59pt'>Berhasil</td>
+  <td rowspan=4 class=xl74 width=54 style='border-bottom:1.0pt solid black;
+  border-top:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl69 width=256 style='height:15.0pt;border-left:none;
+  width:192pt'>2. Kosongkan field Name</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl69 width=256 style='height:15.0pt;border-left:none;
+  width:192pt'>3. Isi field lainnya</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>4. Klik &quot;Save&quot;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td rowspan=4 height=81 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:60.75pt;border-top:none;width:69pt'>TC-015</td>
+  <td rowspan=4 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi validasi field Email kosong</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Klik menu &quot;Add New Contact&quot;</td>
+  <td rowspan=4 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Muncul validasi HTML5 &quot;Harap isi bidang
+  ini&quot;</td>
+  <td rowspan=4 class=xl68 width=78 style='border-bottom:1.0pt solid black;
+  border-top:none;width:59pt'>Berhasil</td>
+  <td rowspan=4 class=xl74 width=54 style='border-bottom:1.0pt solid black;
+  border-top:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl69 width=256 style='height:15.0pt;border-left:none;
+  width:192pt'>2. Isi Name: Test</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl69 width=256 style='height:15.0pt;border-left:none;
+  width:192pt'>3. Kosongkan field Email</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>4. Klik &quot;Save&quot;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td rowspan=3 height=61 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:45.75pt;border-top:none;width:69pt'>TC-016</td>
+  <td rowspan=3 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi tombol Cancel</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Klik menu &quot;Add New Contact&quot;</td>
+  <td rowspan=3 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>User diarahkan ke index.php tanpa menyimpan data</td>
+  <td rowspan=3 class=xl68 width=78 style='border-bottom:1.0pt solid black;
+  border-top:none;width:59pt'>Berhasil</td>
+  <td rowspan=3 class=xl74 width=54 style='border-bottom:1.0pt solid black;
+  border-top:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl69 width=256 style='height:15.0pt;border-left:none;
+  width:192pt'>2. Isi beberapa field</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>3. Klik tombol &quot;Cancel&quot;</td>
+ </tr>
+ <tr height=35 style='height:26.25pt'>
+  <td height=35 class=xl67 width=92 style='height:26.25pt;border-top:none;
+  width:69pt'>TC-017</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>Verifikasi
+  akses create tanpa login</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Tanpa login, akses langsung URL create.php</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>User
+  diarahkan ke halaman login.php</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+<!-- MODUL UPDATE -->
+ <tr height=21 style='height:15.75pt'>
+  <td colspan=6 height=21 class=xl71 width=992 style='border-right:1.0pt solid black;
+  height:15.75pt;width:745pt'>MODUL UPDATE CONTACT</td>
+ </tr>
+ <tr height=35 style='height:26.25pt'>
+  <td rowspan=3 height=77 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:57.75pt;border-top:none;width:69pt'>TC-018</td>
+  <td rowspan=3 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi update kontak dengan data valid</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Di dashboard, klik &quot;edit&quot; pada salah satu kontak</td>
+  <td rowspan=3 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Data terupdate, redirect ke dashboard, perubahan
+  terlihat di tabel</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl69 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>2. Ubah Name menjadi: Updated Name</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>3. Klik &quot;Update&quot;</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=35 style='height:26.25pt'>
+  <td height=35 class=xl67 width=92 style='height:26.25pt;border-top:none;
+  width:69pt'>TC-019</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>Verifikasi
+  form update menampilkan data existing</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Klik &quot;edit&quot; pada kontak ID:1</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>Form
+  menampilkan data kontak yang sesuai (Name, Email, Title terisi)</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td rowspan=3 height=77 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:57.75pt;border-top:none;width:69pt'>TC-020</td>
+  <td rowspan=3 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi update semua field</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Klik &quot;edit&quot; pada salah satu kontak</td>
+  <td rowspan=3 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Semua perubahan tersimpan dan terlihat di
+  dashboard</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=35 style='height:26.25pt'>
+  <td height=35 class=xl69 width=256 style='height:26.25pt;border-left:none;
+  width:192pt'>2. Ubah semua field (Name, Email, Phone, Title)</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>3. Klik &quot;Update&quot;</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=35 style='height:26.25pt'>
+  <td height=35 class=xl67 width=92 style='height:26.25pt;border-top:none;
+  width:69pt'>TC-021</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>Verifikasi
+  akses update dengan ID tidak valid</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Akses URL update.php?id=99999</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>Muncul
+  pesan &quot;Contact doesn't exist!&quot;</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl67 width=92 style='height:15.75pt;border-top:none;
+  width:69pt'>TC-022</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>Verifikasi
+  akses update tanpa parameter ID</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Akses URL update.php tanpa parameter id</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>Muncul
+  pesan &quot;No ID specified!&quot;</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=35 style='height:26.25pt'>
+  <td height=35 class=xl67 width=92 style='height:26.25pt;border-top:none;
+  width:69pt'>TC-023</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>Verifikasi
+  tombol Cancel di halaman update</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Di halaman update, klik tombol &quot;Cancel&quot;</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>User
+  diarahkan ke index.php tanpa menyimpan perubahan</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+<!-- MODUL DELETE -->
+ <tr height=21 style='height:15.75pt'>
+  <td colspan=6 height=21 class=xl71 width=992 style='border-right:1.0pt solid black;
+  height:15.75pt;width:745pt'>MODUL DELETE CONTACT</td>
+ </tr>
+ <tr height=35 style='height:26.25pt'>
+  <td rowspan=2 height=56 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:42.0pt;border-top:none;width:69pt'>TC-024</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi hapus kontak dengan konfirmasi OK</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Di dashboard, klik &quot;delete&quot; pada salah satu kontak</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Kontak terhapus dari database dan tidak muncul
+  di tabel</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>2. Klik &quot;OK&quot; pada dialog konfirmasi</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=35 style='height:26.25pt'>
+  <td rowspan=2 height=56 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:42.0pt;border-top:none;width:69pt'>TC-025</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi batal hapus kontak</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Di dashboard, klik &quot;delete&quot; pada salah satu kontak</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Kontak TIDAK terhapus, tetap ada di tabel</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>2. Klik &quot;Cancel&quot; pada dialog konfirmasi</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl67 width=92 style='height:15.75pt;border-top:none;
+  width:69pt'>TC-026</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>Verifikasi
+  akses delete tanpa parameter ID</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Akses URL delete.php tanpa parameter id</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>Muncul
+  pesan &quot;No ID specified!&quot;</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl67 width=92 style='height:15.75pt;border-top:none;
+  width:69pt'>TC-027</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>Verifikasi
+  akses delete tanpa login</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Tanpa login, akses URL delete.php?id=1</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>User
+  diarahkan ke halaman login.php</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+<!-- MODUL PROFILE -->
+ <tr height=21 style='height:15.75pt'>
+  <td colspan=6 height=21 class=xl71 width=992 style='border-right:1.0pt solid black;
+  height:15.75pt;width:745pt'>MODUL PROFILE</td>
+ </tr>
+ <tr height=35 style='height:26.25pt'>
+  <td height=35 class=xl67 width=92 style='height:26.25pt;border-top:none;
+  width:69pt'>TC-028</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>Verifikasi
+  tampilan halaman profil</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Klik menu &quot;Profile&quot;</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>Halaman
+  menampilkan username yang sedang login dan foto profil</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td rowspan=2 height=42 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:31.5pt;border-top:none;width:69pt'>TC-029</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi upload foto format JPG</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Di halaman profil, pilih file .jpg</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Foto profil berhasil diupload dan ditampilkan</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>2. Klik &quot;Change&quot;</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td rowspan=2 height=42 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:31.5pt;border-top:none;width:69pt'>TC-030</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi upload foto format JPEG</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Di halaman profil, pilih file .jpeg</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Foto profil berhasil diupload dan ditampilkan</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>2. Klik &quot;Change&quot;</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td rowspan=2 height=42 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:31.5pt;border-top:none;width:69pt'>TC-031</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi penolakan upload format PNG</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Di halaman profil, pilih file .png</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Muncul error &quot;Ekstensi tidak diijinkan.
+  Hanya menerima file JPG/JPEG&quot;</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>2. Klik &quot;Change&quot;</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td rowspan=2 height=42 class=xl68 width=92 style='border-bottom:1.0pt solid black;
+  height:31.5pt;border-top:none;width:69pt'>TC-032</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Verifikasi penolakan upload format GIF</td>
+  <td class=xl68 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Di halaman profil, pilih file .gif</td>
+  <td rowspan=2 class=xl68 width=256 style='border-bottom:1.0pt solid black;
+  border-top:none;width:192pt'>Muncul error &quot;Ekstensi tidak diijinkan.
+  Hanya menerima file JPG/JPEG&quot;</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl70 width=256 style='height:15.75pt;border-left:none;
+  width:192pt'>2. Klik &quot;Change&quot;</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=35 style='height:26.25pt'>
+  <td height=35 class=xl67 width=92 style='height:26.25pt;border-top:none;
+  width:69pt'>TC-033</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>Verifikasi
+  akses profil tanpa login</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>1.
+  Tanpa login, akses langsung URL profil.php</td>
+  <td class=xl67 width=256 style='border-top:none;border-left:none;width:192pt'>User
+  diarahkan ke halaman login.php</td>
+  <td class=xl67 width=78 style='border-top:none;border-left:none;width:59pt'>Berhasil</td>
+  <td class=xl66 width=54 style='border-top:none;border-left:none;width:41pt'>Pass</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=6 style='height:15.0pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=6 style='height:15.0pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=6 style='height:15.0pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=6 style='height:15.0pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=4 style='height:15.0pt;mso-ignore:colspan'></td>
+  <td class=xl84></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=4 style='height:15.0pt;mso-ignore:colspan'></td>
+  <td class=xl84></td>
+  <td></td>
+ </tr>
+ <tr height=24 style='height:18.0pt'>
+  <td height=24 class=xl77 colspan=2 style='height:18.0pt;mso-ignore:colspan'>RINGKASAN</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl84></td>
+  <td></td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 colspan=4 style='height:15.75pt;mso-ignore:colspan'></td>
+  <td class=xl84></td>
+  <td></td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl65 width=92 style='height:15.75pt;width:69pt'>Modul</td>
+  <td class=xl65 width=256 style='border-left:none;width:192pt'>Jumlah</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl84></td>
+  <td></td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl67 width=92 style='height:15.75pt;border-top:none;
+  width:69pt'>Login</td>
+  <td class=xl78 width=256 style='border-top:none;border-left:none;width:192pt'>6</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl84></td>
+  <td></td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl67 width=92 style='height:15.75pt;border-top:none;
+  width:69pt'>Logout</td>
+  <td class=xl78 width=256 style='border-top:none;border-left:none;width:192pt'>2</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl84></td>
+  <td></td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl67 width=92 style='height:15.75pt;border-top:none;
+  width:69pt'>Dashboard</td>
+  <td class=xl78 width=256 style='border-top:none;border-left:none;width:192pt'>4</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl84></td>
+  <td></td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl67 width=92 style='height:15.75pt;border-top:none;
+  width:69pt'>Create Contact</td>
+  <td class=xl78 width=256 style='border-top:none;border-left:none;width:192pt'>5</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl84></td>
+  <td></td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl67 width=92 style='height:15.75pt;border-top:none;
+  width:69pt'>Update Contact</td>
+  <td class=xl78 width=256 style='border-top:none;border-left:none;width:192pt'>6</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl84></td>
+  <td></td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl67 width=92 style='height:15.75pt;border-top:none;
+  width:69pt'>Delete Contact</td>
+  <td class=xl78 width=256 style='border-top:none;border-left:none;width:192pt'>4</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl84></td>
+  <td></td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl67 width=92 style='height:15.75pt;border-top:none;
+  width:69pt'>Profile</td>
+  <td class=xl78 width=256 style='border-top:none;border-left:none;width:192pt'>6</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl84></td>
+  <td></td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl67 width=92 style='height:15.75pt;border-top:none;
+  width:69pt'>Navigation</td>
+  <td class=xl78 width=256 style='border-top:none;border-left:none;width:192pt'>3</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl84></td>
+  <td></td>
+ </tr>
+ <tr height=21 style='height:15.75pt'>
+  <td height=21 class=xl79 width=92 style='height:15.75pt;border-top:none;
+  width:69pt'>TOTAL</td>
+  <td class=xl80 width=256 style='border-top:none;border-left:none;width:192pt'>36</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl84></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=4 style='height:15.0pt;mso-ignore:colspan'></td>
+  <td class=xl84></td>
+  <td></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl81 colspan=2 style='height:15.0pt;mso-ignore:colspan'>Kredensial
+  Testing:<font class="font5"> Username: admin | Password: admin123</font></td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl84></td>
+  <td></td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=92 style='width:69pt'></td>
+  <td width=256 style='width:192pt'></td>
+  <td width=256 style='width:192pt'></td>
+  <td width=256 style='width:192pt'></td>
+  <td width=78 style='width:59pt'></td>
+  <td width=54 style='width:41pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+</body>
+
+</html>
