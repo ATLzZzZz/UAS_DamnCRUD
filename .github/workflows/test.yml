@@ -30,7 +30,7 @@ jobs:
         image: mysql:8.0
         env:
           MYSQL_ROOT_PASSWORD: root
-          MYSQL_DATABASE: badcrud
+          MYSQL_DATABASE: damncrud
         ports:
           - 3306:3306
         options: >-
@@ -75,13 +75,12 @@ jobs:
 
       - name: Import Database
         run: |
-          mysql -h 127.0.0.1 -u root -proot badcrud < db/damncrud.sql
+          mysql -h 127.0.0.1 -u root -proot < db/damncrud.sql
 
       - name: Update Database Config
         run: |
-          sed -i "s/\$DATABASE_PASS = 'root123'/\$DATABASE_PASS = 'root'/g" functions.php
+          sed -i "s/\$DATABASE_PASS = ''/\$DATABASE_PASS = 'root'/g" functions.php
           sed -i "s/\$DATABASE_HOST = 'localhost'/\$DATABASE_HOST = '127.0.0.1'/g" functions.php
-          sed -i "s/\$DATABASE_NAME = 'badcrud'/\$DATABASE_NAME = 'badcrud'/g" functions.php
 
       - name: Start PHP Server
         run: |

@@ -21,21 +21,14 @@ def pytest_configure(config):
     Hook yang dijalankan saat pytest dikonfigurasi.
     Menambahkan metadata ke report.
     """
-    config._metadata = {
-        'Project Name': 'DamnCRUD Automation Test',
-        'Test Framework': 'Pytest + Selenium',
-        'Executed By': os.environ.get('USER', 'CI/CD Pipeline'),
-        'Execution Date': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-        'Base URL': os.environ.get('BASE_URL', 'http://localhost:81/DamnCRUD'),
-        'Parallel Workers': 'Auto (pytest-xdist)'
-    }
-
-
-def pytest_html_report_title(report):
-    """
-    Hook untuk mengubah judul HTML report.
-    """
-    report.title = "DamnCRUD Automation Test Report"
+    # Hanya set metadata jika pytest-html tersedia
+    if hasattr(config, '_metadata'):
+        config._metadata['Project Name'] = 'DamnCRUD Automation Test'
+        config._metadata['Test Framework'] = 'Pytest + Selenium'
+        config._metadata['Executed By'] = os.environ.get('USER', 'CI/CD Pipeline')
+        config._metadata['Execution Date'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        config._metadata['Base URL'] = os.environ.get('BASE_URL', 'http://localhost:81/DamnCRUD')
+        config._metadata['Parallel Workers'] = 'Auto (pytest-xdist)'
 
 
 def pytest_collection_modifyitems(config, items):
