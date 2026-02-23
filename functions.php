@@ -1,18 +1,20 @@
 <?php
 
-function pdo_connect(){
+function pdo_connect()
+{
     $DATABASE_HOST = 'localhost';
     $DATABASE_USER = 'root';
-    $DATABASE_PASS = 'root123';
-    $DATABASE_NAME = 'badcrud';
+    $DATABASE_PASS = '';
+    $DATABASE_NAME = 'damncrud';
     try {
-    	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME, $DATABASE_USER, $DATABASE_PASS);
+        return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME, $DATABASE_USER, $DATABASE_PASS);
     } catch (PDOException $exception) {
-    	die ('Failed to connect to database!');
+        die('Failed to connect to database!');
     }
 }
 
-function style_script(){
+function style_script()
+{
     return '
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">

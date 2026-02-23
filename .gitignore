@@ -1,0 +1,62 @@
+# =============================================================================
+# .gitignore for DamnCRUD Automation Testing
+# =============================================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Test outputs
+report.html
+test-results.xml
+*.log
+screenshots/
+.pytest_cache/
+htmlcov/
+.coverage
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Chromedriver
+chromedriver
+chromedriver.exe
+
+# Local config
+.env
+*.local
+
+# XAMPP/WAMP specific
+*.bak

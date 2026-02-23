@@ -1,0 +1,33 @@
+# =============================================================================
+# Requirements untuk Automation Testing DamnCRUD
+# CI/CD Pipeline dengan Pytest Parallel Execution
+# =============================================================================
+# Install: pip install -r requirements.txt
+# =============================================================================
+
+# Selenium WebDriver
+selenium==4.15.0
+
+# WebDriver Manager (auto download driver)
+webdriver-manager==4.0.1
+
+# Pytest Framework
+pytest==7.4.0
+
+# Pytest Parallel Execution (pytest-xdist) - PENTING UNTUK CI/CD
+pytest-xdist==3.5.0
+
+# Pytest HTML Report
+pytest-html==4.1.1
+
+# Pytest Metadata
+pytest-metadata==3.0.0
+
+# Pytest Rerun Failed Tests
+pytest-rerunfailures==13.0
+
+# Pytest Timeout
+pytest-timeout==2.2.0
+
+# Additional utilities
+requests==2.31.0

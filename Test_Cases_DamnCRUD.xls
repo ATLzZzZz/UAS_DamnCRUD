@@ -1,0 +1,451 @@
+<html xmlns:x="urn:schemas-microsoft-com:office:excel">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--[if gte mso 9]>
+<xml>
+<x:ExcelWorkbook>
+<x:ExcelWorksheets>
+<x:ExcelWorksheet>
+<x:Name>Test Cases</x:Name>
+<x:WorksheetOptions>
+<x:Print>
+<x:ValidPrinterInfo/>
+</x:Print>
+</x:WorksheetOptions>
+</x:ExcelWorksheet>
+</x:ExcelWorksheets>
+</x:ExcelWorkbook>
+</xml>
+<![endif]-->
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    background-color: #4472C4;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #000;
+}
+td {
+    border: 1px solid #000;
+    padding: 8px;
+    vertical-align: top;
+}
+.module-header {
+    background-color: #5B9BD5;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+tr:nth-child(even) {
+    background-color: #D9E2F3;
+}
+tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center; color:#4472C4;">FUNCTIONAL TEST CASES - DamnCRUD</h2>
+<p style="text-align:center;">Tanggal: 23 Februari 2026</p>
+
+<table>
+<thead>
+<tr>
+    <th style="width:100px;">ID</th>
+    <th style="width:200px;">Test Case Objective</th>
+    <th style="width:350px;">Test Case Description</th>
+    <th style="width:250px;">Expected Result</th>
+    <th style="width:200px;">Actual Result</th>
+    <th style="width:80px;">Pass/Fail</th>
+</tr>
+</thead>
+<tbody>
+
+<!-- MODUL LOGIN -->
+<tr class="module-header">
+    <td colspan="6">MODUL LOGIN</td>
+</tr>
+<tr>
+    <td>TC-001</td>
+    <td>Verifikasi login dengan kredensial valid</td>
+    <td>1. Buka halaman login.php<br>2. Masukkan username: admin<br>3. Masukkan password: admin123<br>4. Klik tombol "OK I'm sign in"</td>
+    <td>User berhasil login dan diarahkan ke halaman Dashboard (index.php)</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-002</td>
+    <td>Verifikasi login dengan username salah</td>
+    <td>1. Buka halaman login.php<br>2. Masukkan username: wronguser<br>3. Masukkan password: admin123<br>4. Klik tombol "OK I'm sign in"</td>
+    <td>Muncul pesan error "Damn, wrong credentials!!"</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-003</td>
+    <td>Verifikasi login dengan password salah</td>
+    <td>1. Buka halaman login.php<br>2. Masukkan username: admin<br>3. Masukkan password: wrongpassword<br>4. Klik tombol "OK I'm sign in"</td>
+    <td>Muncul pesan error "Damn, wrong credentials!!"</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-004</td>
+    <td>Verifikasi login dengan username kosong</td>
+    <td>1. Buka halaman login.php<br>2. Kosongkan field username<br>3. Masukkan password: admin123<br>4. Klik tombol "OK I'm sign in"</td>
+    <td>Muncul validasi HTML5 "Please fill out this field"</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-005</td>
+    <td>Verifikasi login dengan password kosong</td>
+    <td>1. Buka halaman login.php<br>2. Masukkan username: admin<br>3. Kosongkan field password<br>4. Klik tombol "OK I'm sign in"</td>
+    <td>Muncul validasi HTML5 "Please fill out this field"</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-006</td>
+    <td>Verifikasi login dengan semua field kosong</td>
+    <td>1. Buka halaman login.php<br>2. Kosongkan semua field<br>3. Klik tombol "OK I'm sign in"</td>
+    <td>Muncul validasi HTML5 pada field username</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<!-- MODUL LOGOUT -->
+<tr class="module-header">
+    <td colspan="6">MODUL LOGOUT</td>
+</tr>
+<tr>
+    <td>TC-007</td>
+    <td>Verifikasi fungsi logout</td>
+    <td>1. Login ke sistem<br>2. Klik tombol "Sign out"</td>
+    <td>Session dihancurkan, user diarahkan ke halaman login.php</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-008</td>
+    <td>Verifikasi akses halaman setelah logout</td>
+    <td>1. Logout dari sistem<br>2. Akses langsung URL index.php di browser</td>
+    <td>User diarahkan kembali ke halaman login.php</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<!-- MODUL DASHBOARD -->
+<tr class="module-header">
+    <td colspan="6">MODUL DASHBOARD (READ)</td>
+</tr>
+<tr>
+    <td>TC-009</td>
+    <td>Verifikasi tampilan daftar kontak</td>
+    <td>1. Login ke sistem<br>2. Observasi tabel kontak di dashboard</td>
+    <td>Tabel menampilkan kolom: #, Name, Email, Phone, Title, Created, dan Actions (edit/delete)</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-010</td>
+    <td>Verifikasi fitur search DataTables</td>
+    <td>1. Login ke sistem<br>2. Ketik "John" di search box</td>
+    <td>Data terfilter menampilkan hanya kontak yang mengandung kata "John"</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-011</td>
+    <td>Verifikasi fitur sorting DataTables</td>
+    <td>1. Login ke sistem<br>2. Klik header kolom "Name"</td>
+    <td>Data terurut berdasarkan kolom Name (ascending/descending)</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-012</td>
+    <td>Verifikasi akses dashboard tanpa login</td>
+    <td>1. Tanpa login, akses langsung URL index.php</td>
+    <td>User diarahkan ke halaman login.php</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<!-- MODUL CREATE -->
+<tr class="module-header">
+    <td colspan="6">MODUL CREATE CONTACT</td>
+</tr>
+<tr>
+    <td>TC-013</td>
+    <td>Verifikasi penambahan kontak dengan data valid</td>
+    <td>1. Klik menu "Create"<br>2. Isi Name: Test User<br>3. Isi Email: test@example.com<br>4. Isi Phone: 08123456789<br>5. Isi Title: Tester<br>6. Klik "Save"</td>
+    <td>Kontak baru tersimpan, redirect ke dashboard, data muncul di tabel</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-014</td>
+    <td>Verifikasi validasi field Name kosong</td>
+    <td>1. Klik menu "Create"<br>2. Kosongkan field Name<br>3. Isi field lainnya<br>4. Klik "Save"</td>
+    <td>Muncul validasi HTML5 "Please fill out this field"</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-015</td>
+    <td>Verifikasi validasi field Email kosong</td>
+    <td>1. Klik menu "Create"<br>2. Isi Name: Test<br>3. Kosongkan field Email<br>4. Klik "Save"</td>
+    <td>Muncul validasi HTML5 "Please fill out this field"</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-016</td>
+    <td>Verifikasi tombol Cancel</td>
+    <td>1. Klik menu "Create"<br>2. Isi beberapa field<br>3. Klik tombol "Cancel"</td>
+    <td>User diarahkan ke index.php tanpa menyimpan data</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-017</td>
+    <td>Verifikasi akses create tanpa login</td>
+    <td>1. Tanpa login, akses langsung URL create.php</td>
+    <td>User diarahkan ke halaman login.php</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<!-- MODUL UPDATE -->
+<tr class="module-header">
+    <td colspan="6">MODUL UPDATE CONTACT</td>
+</tr>
+<tr>
+    <td>TC-018</td>
+    <td>Verifikasi update kontak dengan data valid</td>
+    <td>1. Di dashboard, klik "edit" pada salah satu kontak<br>2. Ubah Name menjadi: Updated Name<br>3. Klik "Update"</td>
+    <td>Data terupdate, redirect ke dashboard, perubahan terlihat di tabel</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-019</td>
+    <td>Verifikasi form update menampilkan data existing</td>
+    <td>1. Klik "edit" pada kontak ID:1</td>
+    <td>Form menampilkan data kontak yang sesuai (Name, Email, Title terisi)</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-020</td>
+    <td>Verifikasi update semua field</td>
+    <td>1. Klik "edit" pada salah satu kontak<br>2. Ubah semua field (Name, Email, Phone, Title)<br>3. Klik "Update"</td>
+    <td>Semua perubahan tersimpan dan terlihat di dashboard</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-021</td>
+    <td>Verifikasi akses update dengan ID tidak valid</td>
+    <td>1. Akses URL update.php?id=99999</td>
+    <td>Muncul pesan "Contact doesn't exist!"</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-022</td>
+    <td>Verifikasi akses update tanpa parameter ID</td>
+    <td>1. Akses URL update.php tanpa parameter id</td>
+    <td>Muncul pesan "No ID specified!"</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-023</td>
+    <td>Verifikasi tombol Cancel di halaman update</td>
+    <td>1. Di halaman update, klik tombol "Cancel"</td>
+    <td>User diarahkan ke index.php tanpa menyimpan perubahan</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<!-- MODUL DELETE -->
+<tr class="module-header">
+    <td colspan="6">MODUL DELETE CONTACT</td>
+</tr>
+<tr>
+    <td>TC-024</td>
+    <td>Verifikasi hapus kontak dengan konfirmasi OK</td>
+    <td>1. Di dashboard, klik "delete" pada salah satu kontak<br>2. Klik "OK" pada dialog konfirmasi</td>
+    <td>Kontak terhapus dari database dan tidak muncul di tabel</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-025</td>
+    <td>Verifikasi batal hapus kontak</td>
+    <td>1. Di dashboard, klik "delete" pada salah satu kontak<br>2. Klik "Cancel" pada dialog konfirmasi</td>
+    <td>Kontak TIDAK terhapus, tetap ada di tabel</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-026</td>
+    <td>Verifikasi akses delete tanpa parameter ID</td>
+    <td>1. Akses URL delete.php tanpa parameter id</td>
+    <td>Muncul pesan "No ID specified!"</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-027</td>
+    <td>Verifikasi akses delete tanpa login</td>
+    <td>1. Tanpa login, akses URL delete.php?id=1</td>
+    <td>User diarahkan ke halaman login.php</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<!-- MODUL PROFILE -->
+<tr class="module-header">
+    <td colspan="6">MODUL PROFILE</td>
+</tr>
+<tr>
+    <td>TC-028</td>
+    <td>Verifikasi tampilan halaman profil</td>
+    <td>1. Klik menu "Profile"</td>
+    <td>Halaman menampilkan username yang sedang login dan foto profil</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-029</td>
+    <td>Verifikasi upload foto format JPG</td>
+    <td>1. Di halaman profil, pilih file .jpg<br>2. Klik "Change"</td>
+    <td>Foto profil berhasil diupload dan ditampilkan</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-030</td>
+    <td>Verifikasi upload foto format JPEG</td>
+    <td>1. Di halaman profil, pilih file .jpeg<br>2. Klik "Change"</td>
+    <td>Foto profil berhasil diupload dan ditampilkan</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-031</td>
+    <td>Verifikasi penolakan upload format PNG</td>
+    <td>1. Di halaman profil, pilih file .png<br>2. Klik "Change"</td>
+    <td>Muncul error "Ekstensi tidak diijinkan. Hanya menerima file JPG/JPEG"</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-032</td>
+    <td>Verifikasi penolakan upload format GIF</td>
+    <td>1. Di halaman profil, pilih file .gif<br>2. Klik "Change"</td>
+    <td>Muncul error "Ekstensi tidak diijinkan. Hanya menerima file JPG/JPEG"</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-033</td>
+    <td>Verifikasi akses profil tanpa login</td>
+    <td>1. Tanpa login, akses langsung URL profil.php</td>
+    <td>User diarahkan ke halaman login.php</td>
+    <td></td>
+    <td></td>
+</tr>
+
+<!-- MODUL NAVIGATION -->
+<tr class="module-header">
+    <td colspan="6">MODUL NAVIGATION</td>
+</tr>
+<tr>
+    <td>TC-034</td>
+    <td>Verifikasi navigasi menu Dashboard</td>
+    <td>1. Dari halaman manapun, klik menu "Dashboard"</td>
+    <td>User diarahkan ke index.php</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-035</td>
+    <td>Verifikasi navigasi menu Create</td>
+    <td>1. Dari halaman manapun, klik menu "Create"</td>
+    <td>User diarahkan ke create.php</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TC-036</td>
+    <td>Verifikasi navigasi menu Profile</td>
+    <td>1. Dari halaman manapun, klik menu "Profile"</td>
+    <td>User diarahkan ke profil.php</td>
+    <td></td>
+    <td></td>
+</tr>
+
+</tbody>
+</table>
+
+<br><br>
+
+<h3>RINGKASAN</h3>
+<table style="width:300px;">
+<tr>
+    <th>Modul</th>
+    <th>Jumlah</th>
+</tr>
+<tr>
+    <td>Login</td>
+    <td style="text-align:center;">6</td>
+</tr>
+<tr>
+    <td>Logout</td>
+    <td style="text-align:center;">2</td>
+</tr>
+<tr>
+    <td>Dashboard</td>
+    <td style="text-align:center;">4</td>
+</tr>
+<tr>
+    <td>Create Contact</td>
+    <td style="text-align:center;">5</td>
+</tr>
+<tr>
+    <td>Update Contact</td>
+    <td style="text-align:center;">6</td>
+</tr>
+<tr>
+    <td>Delete Contact</td>
+    <td style="text-align:center;">4</td>
+</tr>
+<tr>
+    <td>Profile</td>
+    <td style="text-align:center;">6</td>
+</tr>
+<tr>
+    <td>Navigation</td>
+    <td style="text-align:center;">3</td>
+</tr>
+<tr style="background-color:#4472C4; color:white; font-weight:bold;">
+    <td>TOTAL</td>
+    <td style="text-align:center;">36</td>
+</tr>
+</table>
+
+<br>
+<p><b>Kredensial Testing:</b> Username: admin | Password: admin123</p>
+
+</body>
+</html>
