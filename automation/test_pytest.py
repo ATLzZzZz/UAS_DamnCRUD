@@ -227,10 +227,17 @@ class TestDamnCRUD:
         update_button = driver.find_element(By.CSS_SELECTOR, "input[type='submit']")
         update_button.click()
         
-        # Step 5: Verifikasi
+        # Step 5: Verifikasi dengan search
         WebDriverWait(driver, 10).until(EC.url_contains("index.php"))
         
         time.sleep(1)
+        
+        # Gunakan search DataTables untuk mencari data yang diupdate
+        search_box = driver.find_element(By.CSS_SELECTOR, "#employee_filter input")
+        search_box.clear()
+        search_box.send_keys(update_data["name"])
+        time.sleep(1)
+        
         page_source = driver.page_source
         assert update_data["name"] in page_source, f"Data '{update_data['name']}' tidak terupdate"
 
